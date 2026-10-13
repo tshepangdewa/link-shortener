@@ -3,6 +3,14 @@ import './globals.css';
 export const metadata = {
   title: 'ShortLink — Fast and Simple URL Shortener',
   description: 'Fast, permanent, zero-friction URL shortening with no accounts, no ads, no tracking.',
+  icons: {
+    icon: [
+      { url: '/favicon.ico' },
+      { url: '/favicon.png', type: 'image/png' },
+    ],
+    shortcut: '/favicon.png',
+    apple: '/logo.png',
+  },
 };
 
 // ==========================================
@@ -34,6 +42,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -45,10 +56,16 @@ export default function RootLayout({ children }) {
         <div className="layout-wrapper">
           <header className="site-nav">
             <div className="nav-inner">
-              <div className="brand-badge">
-                <span className="brand-indicator"></span>
+              <a href="/" className="brand-badge">
+                <img
+                  src="/logo.png"
+                  alt="ShortLink Logo"
+                  className="brand-logo"
+                  width="28"
+                  height="28"
+                />
                 <span>ShortLink</span>
-              </div>
+              </a>
             </div>
           </header>
 
