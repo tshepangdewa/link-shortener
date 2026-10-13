@@ -108,7 +108,7 @@ export default function HomePage() {
       <section className="hero-section">
         <h1 className="hero-title">SHORTEN ANY LINK.</h1>
         <p className="hero-subtitle">
-          Minimalist, high-performance URL shortener. No accounts, no ads, instant redirects.
+          Fast and simple URL shortener. No accounts, no ads, no tracking instant redirects.
         </p>
       </section>
 
