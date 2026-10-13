@@ -52,6 +52,10 @@ begin
   where short_code = code;
 end;
 $$ language plpgsql security definer;
+
+-- Grant table & function permissions to anon and authenticated roles
+grant all on table public.urls to anon, authenticated;
+grant execute on function public.increment_clicks(text) to anon, authenticated;
 ```
 
 ---
